@@ -1,0 +1,186 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+body, .content {
+    margin: auto;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: cornsilk;
+   max-height: 100vh;
+   flex-direction: column;
+}
+.headerDiv {
+    font-size: 60px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    background-color: cornflowerblue;
+    color:rgb(255, 255, 255);
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 20px;
+    line-height: 2.5;
+    padding: 0 20px;
+    border: 0;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center; 
+    gap: 1rem;
+    flex-direction: row;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    margin: 2rem;
+}
+
+dialog {
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 400px; /*Optional: sets a fixed width*/
+    max-width: 90%; /*Ensures responsiveness*/
+    position: fixed; /*Positions it on the screen*/
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Proper centering with transform */
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Optional: Adds shadow */
+    border: none;
+}
+
+input {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border-color: rgb(217, 215, 215);
+    padding: 0.5rem;
+}
+
+label {
+    text-align: start;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.outputDiv { 
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+output{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.card-book {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border-color: grey;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 5px 15px -12px rgba(0, 0, 0, 0.25);
+    width: 20rem;
+    height: 15rem;
+}
+
+.removeBtn {
+    margin-top: 2rem;
+}
+
+/* The slider */
+
+.switch {
+    margin-top: 2rem;
+    position: relative;
+    display: inline-block;
+    width: 6.5rem;
+    height: 44px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b7b6b6;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 6px;
+    background-color: white;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+
+  .slider:after
+{
+ content:'UNREAD';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 65%;
+ font-size: 12px;
+ font-family: 'Roboto';
+ font-weight: 600;
+}
+  
+  input:checked + .slider {
+    background-color:  cornflowerblue;
+  }
+  input:checked + .slider:after {
+    content: "READ";
+    font-family: "Roboto", sans-serif;
+    left: 45%;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px cornflowerblue;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(4rem);
+    -ms-transform: translateX(4rem);
+    transform: translateX(4rem);
+  }
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
